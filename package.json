@@ -1,0 +1,22 @@
+{
+  "name": "herokuhomework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/philipwood0912/HerokuHomework.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/philipwood0912/HerokuHomework/issues"
+  },
+  "homepage": "https://github.com/philipwood0912/HerokuHomework#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
