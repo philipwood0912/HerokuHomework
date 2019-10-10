@@ -11,32 +11,35 @@
 <body>
     <header id="mainhead">
         <img src="images/cannabliss.svg" alt="logo">
-        <div></div>
+        <div id="divtop"></div>
         <nav id="mainnav">
             <ul>
                 <li><a href="#">PRODUCTS</a></li>
-                <li><a href="3">CONTACT</a></li>
+                <li><a href="#">CONTACT</a></li>
             </ul>
         </nav>
-        <div id="divbottom"></div>
     </header>
+    <div id="divbottom"></div>
     <div id="maintitle">
-        <h2>Feature Promotions</h2>
+        <h2>NEW <span>ARRIVALS</span></h2>
     </div>
     <div>
-        <div>
-            <h3 class="promobutton" data-buttonref="0"></h3>
-            <h3 class="promobutton" data-buttonref="1"></h3>
-            <h3 class="promobutton" data-buttonref="2"></h3>
-            <h3 class="promobutton" data-buttonref="3"></h3>
+        <h2 class="hidden">Content</h2>
+        <div id="flexi">
+            <div id="buttondiv">
+                <h3 class="promobutton" data-buttonref="0"></h3>
+                <h3 class="promobutton" data-buttonref="1"></h3>
+                <h3 class="promobutton" data-buttonref="2"></h3>
+                <h3 class="promobutton" data-buttonref="3"></h3>
+            </div>
+            <div id="promoimg">
+                <img id="theimage" src="images/nug0.jpg" alt="promo">
+            </div>
         </div>
-        <div>
-            <img id="promoimg" alt="promo">
-        </div>
-        <div id="info">
-            <h2></h2>
-            <h3></h3>
-            <p></p>
+        <div id="infocon">
+            <h2 id="name"></h2>
+            <h3 id="sub"></h3>
+            <p id="info"></p>
         </div>
     </div>
     <script src="js/main.js"></script>

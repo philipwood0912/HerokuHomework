@@ -1,9 +1,20 @@
 @import '_vars';
 
+@mixin tablet {
+    @media (min-width: 585px) { @content; }
+}
+@mixin desktop {
+    @media (min-width: 800px) { @content; }
+}
+
+.hidden {
+    display: none;
+}
+
 body {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 10px 10px 0px 10px;
+    padding: 10px 10px 20px 10px;
 }
 
 #mainhead {
@@ -16,9 +27,18 @@ body {
         background-color: $color-green;
         border-bottom: 5px solid $color-pink;
     }
+}
+
+#divbottom {
+    height: 5px;
+    background-color: $color-pink;
+    border-bottom: 5px solid $color-green;
+}
+
+@include desktop {
     #divbottom {
-        background-color: $color-pink;
-        border-bottom-color: $color-green;
+        background-color: $color-green;
+        border-bottom-color: $color-pink;
     }
 }
 
@@ -36,12 +56,143 @@ body {
             border-bottom: $menu-border-small;
             border-radius: 20px;
             a{
-                font-size: 24px;
+                font-size: 20px;
                 font-weight: bolder;
                 font-family: $main-font;
                 color: $color-green;
                 letter-spacing: 2px;
             }
+            @include tablet {
+                a {
+                    font-size: 25px;
+                }
+            }
+        }
+        li:hover {
+            border-color: $color-green;
+        }
+    }
+}
+
+@include desktop {
+    #mainhead {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        #divtop {
+            display: none;
+        }
+    }
+    #mainnav {
+        ul {
+            padding: 15px;
+            width: 400px;
+        }
+    }
+}
+
+#maintitle {
+    text-align: center;
+    padding: 30px 10px;
+    h2 {
+        font-size: 32px;
+        color: $color-green;
+        font-family: $main-font;
+        font-weight: bold;
+        span {
+            color: $color-pink;
+        }
+    }
+    @include tablet {
+        h2 {
+            font-size: 40px;
+        }
+    }
+}
+
+@include desktop {
+    #maintitle {
+        padding: 40px 30px 0px 30px;
+    }
+}
+
+#buttondiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    @include tablet {
+        width: 500px;
+        margin: 0 auto;
+    }
+    h3 {
+        background-color: $color-pink;
+        width: 40px;
+        height: 40px;
+        border-radius: 25px;
+        border: 5px solid $color-green;
+        transition: .4s ease;
+    }
+}
+
+#promoimg {
+    text-align: center;
+    margin: 20px 20px 10px 20px;
+    img {
+        width: 80%;
+        border: 5px solid $color-green;
+        border-radius: 20px;
+        @include tablet {
+            width: 500px;
+        }
+    }
+}
+
+@include desktop {
+    #buttondiv {
+        margin: 0;
+        flex-direction: column;
+        align-items: flex-end;
+        height: 500px;
+        width: 50px;
+    }
+    #flexi {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+#infocon {
+    text-align: center;
+    h2{
+        font-family: $main-font;
+        font-weight: bolder;
+        font-size: 30px;
+        margin-bottom: 10px;
+        color: $color-green;
+    }
+    h3 {
+        font-family: $main-font;
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: $color-pink;
+    }
+    p {
+        font-family: $main-font;
+        font-size: 20px;
+        color: $color-green;
+    }
+    @include tablet {
+        h2 {
+            font-size: 40px;
+        }
+        h3 {
+            font-size: 30px;
+        }
+        p{
+            font-size: 25px;
         }
     }
 }
